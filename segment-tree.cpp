@@ -74,7 +74,7 @@ struct segment_tree {
 		int nmid = (nleft + nright) / 2;
 		return min(
 			query(start, end, 2 * node + 1, nleft, nmid),
-			query(start, end, 2 * node + 2, nmid, nright)
+			query(start, end, 2 * node + 2, nmid + 1, nright)
 		);
 	}
 
